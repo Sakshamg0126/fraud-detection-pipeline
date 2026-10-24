@@ -7,3 +7,10 @@ mlflow.db
 mlruns/
 models/*.joblib
 .env
+echo "sample.json" >> .gitignore
+echo "fraud.json" >> .gitignore
+git add src/api.py tests/test_api.py requirements.txt .gitignore
+git commit -m "Add FastAPI serving endpoint"
+git push
+sample.json
+fraud.json
