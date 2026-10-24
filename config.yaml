@@ -1,0 +1,26 @@
+data:
+  path: data/raw/creditcard.csv
+  target: Class
+  time_col: Time
+  amount_col: Amount
+
+split:
+  train_frac: 0.6
+  val_frac: 0.2      # the remaining 20% is the test set
+
+model:
+  n_estimators: 300
+  max_depth: 5
+  learning_rate: 0.05
+  eval_metric: aucpr
+
+costs:
+  false_positive: 5  # cost of manually reviewing a legit transaction
+                     # a missed fraud costs the transaction Amount
+
+paths:
+  model: models/model.joblib
+  metadata: models/metadata.json
+
+mlflow:
+  experiment: fraud-detection

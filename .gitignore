@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+data/raw/
+creditcard.csv
+mlflow.db
+mlruns/
+models/*.joblib
+.env
